@@ -1,0 +1,229 @@
+.body-map {
+   .product__about {
+      padding-top: 90px;
+   }
+}
+.map {
+   padding: 30px 0 70px;
+   background-color: #272727;
+   @media (max-width: 575px) {
+      padding-bottom: 30px;
+   }
+   .container {
+      @media (max-width: 989px) {
+         max-width: none;
+      }
+   }
+   &__filter {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      @media (max-width: 575px) {
+         margin-bottom: 25px;
+      }
+   }
+
+   &__input {
+      width: 50%;
+      position: relative;
+      margin-right: 50px;
+      input {
+         width: 100%;
+         height: 60px;
+         border-radius: 20px;
+         border: 1px solid #4f4f4f;
+         background-color: transparent;
+         font-family: "Montserrat", sans-serif;
+         font-size: 16px;
+         font-weight: 400;
+         color: $light;
+         padding: 0 50px 0 30px;
+         &:focus {
+            outline: 0;
+            &::placeholder {
+               font-size: 0;
+               color: transparent;
+            }
+         }
+      }
+      @media (max-width: 989px) {
+         width: 80%;
+         margin: 0 auto;
+      }
+      @media (max-width: 575px){
+         width: 100%;
+         margin: 0;
+      }
+   }
+   &__input-btn {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 23px;
+      width: 16px;
+      height: 7px;
+      img {
+         display: block;
+         width: 16px;
+         height: 7px;
+      }
+   }
+   &__features {
+      display: flex;
+      @media (max-width: 989px) {
+         display: none;
+      }
+   }
+
+   &__features-item {
+      margin-right: 15px;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      background-color: #333333;
+      border: 2px solid #4f4f4f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:last-child {
+         margin-right: 0;
+      }
+      img {
+         width: 26px;
+         height: 26px;
+      }
+      &.mapactivebtn {
+         border: 2px solid $active;
+      }
+   }
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      max-height: 700px;
+      @media (max-width: 989px) {
+         flex-wrap: wrap;
+         row-gap: 30px;
+         max-height: 100%;
+      }
+   }
+
+   &__left {
+      flex: 0 0 70%;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         border-radius: 15px;
+      }
+      @media (max-width: 989px) {
+         flex: 0 0 100%;
+         height: 530px;
+      }
+      @media (max-width: 475px) {
+         height: 290px;
+      }
+   }
+
+   &__right {
+      flex: 0 0 27%;
+      overflow-x: hidden;
+      padding-right: 10px;
+      @media (max-width: 989px) {
+         flex: 0 0 100%;
+         padding-right: 0;
+      }
+   }
+
+   &__btn {
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      width: 100%;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 16px 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #4f4f4f;
+      border-radius: 27px;
+      cursor: pointer;
+      transition: all 0.2s linear;
+      &:hover {
+         border: 2px solid $active;
+      }
+      @media (max-width: 989px) {
+         width: auto;
+      }
+      @media (max-width: 475px) {
+         width: 100%;
+      }
+   }
+
+   &__places {
+      margin-top: 36px;
+      overflow-x: hidden;
+      @media (max-width: 989px) {
+         display: flex;
+         flex-wrap: nowrap;
+         overflow-x: auto;
+         overflow-y: hidden;
+         padding-bottom: 25px;
+      }
+   }
+
+   &__place {
+      margin-bottom: 30px;
+      &:last-child {
+         margin-bottom: 0;
+      }
+      @media (max-width: 989px) {
+         margin-right: 52px;
+         margin-bottom: 0;
+         display: inline-block;
+         flex: 0 0 auto;
+      }
+   }
+
+   &__place-title {
+      font-size: 16px;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 10px;
+   }
+
+   &__place-text {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 140%;
+      color: #828282;
+      margin-bottom: 5px;
+   }
+
+   &__place-btn {
+      margin-top: 5px;
+      cursor: pointer;
+      span {
+         font-family: "Montserrat", sans-serif;
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 140%;
+         color: #828282;
+         padding-left: 25px;
+         position: relative;
+         &:before {
+            content: "";
+            background: url("../img/map/subright.svg") center no-repeat;
+            width: 16px;
+            height: 15px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+         }
+      }
+   }
+}
